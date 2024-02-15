@@ -1,5 +1,6 @@
 # Wr4pped Writeup
-**Description:** Look closely, you'll find a clue. Google and ChatGPT are your friends.
+**Description:** It's valentine's day so I wrapped a gift for you. Look closely and you'll be able to retrieve it. Happy valentine's!
+
 ## Solution
 ### Gathering information
 We start by running `file` as ususal.
@@ -100,6 +101,6 @@ We put the password in the Wr4pper.exe program and it gives us our flag!
 
     Securinets{unwr4p->dec0mpile->REV3RSE}
 
-*Hope you had fun solving this task!*
+Hope you had fun solving this task!
 
 ***Author: jio***
