@@ -1,5 +1,10 @@
 # BATman Writeup
-**Description:** BATman is trying to ask you out. He told me that he **SET** some variables for you. I don't know what that means. Do you?
+**Description:**
+
+BATman is trying to ask you out. He told me that he **SET** some variables for you. I don't know what that means. Do you?
+
+**Attachements:** 
+[batman.bat](Files\batman.bat)
 
 ## Solution
 This is a warmup task to test your batch scripting skills. The file is obfuscated and we cannot easily deobfuscate it. Why don't we just run it and see what it does.
