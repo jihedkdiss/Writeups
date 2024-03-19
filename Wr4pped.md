@@ -1,13 +1,16 @@
 # Wr4pped Writeup
-**Description:** 
+
+**Description:**
 
 It's valentine's day so I wrapped a gift for you. Look closely and you'll be able to retrieve it. Happy valentine's!
 
-**Attachements:** 
+**Attachement:**
 [Wr4pped.exe](Files\Wr4pped.exe)
 
 ## Solution
+
 ### Gathering information
+
 We start by running `file` as ususal.
 
     Wr4pped.exe: PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows
@@ -30,16 +33,19 @@ It turns out this is a Windows executable. Let's run it and see what happens. It
 After some digging around we couldn't find the password in plaintext but we see these unusual strings. Let's google them and find out what **Launch4j** is. [The first link](https://launch4j.sourceforge.net/) on google says:
 
     Launch4j is a free and open source tool that allows you to create Windows native executables from Java applications distributed as jars.
-   
+
    There is also some mentions of java at the end which tells us that the executable is just a wrapper around the original java **.jar** file. At this point, dogbolt, ghidra or any other static analysis tool or website don't give us the expected results. **We should retrieve the jar file.**
 
 ### Unwrapping the executable
+
 After googling for some time we stumble upon [this answer](https://reverseengineering.stackexchange.com/questions/3532/get-jar-back-from-wrappedinto-exe-jar) on how to get the .jar file from the .exe file. We follow the steps:
 
  1. Open .exe file in a hex editor (such as [HxD](https://mh-nexus.de/en/hxd/))
  2. Remove anything before the string PK
  3. Save the new file as Wr4pped.jar
+
 ### Decompiling the jar file
+
 Now we have the jar file we can decompile it online using [this website](http://www.javadecompilers.com/).
 Let's have a quick look at the `Wr4pped.java` file. First we have this function which performs some kind of encryption:
 
@@ -68,9 +74,11 @@ Then we have the main funtion:
     }
 
 ### Understanding the code
+
 Based on these two functions, when we type a password and press VERIFY it encrypts our password using the mentioned algorithm then it compares it with the `encryptedFlag` string.
 
 ### Writing a solver
+
 We will be using java as a programming language to write our solver. The steps are pretty straight forward:
 
  1. We declare the encrypted flag and key as String variables
