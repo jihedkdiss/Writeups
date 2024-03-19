@@ -1,22 +1,26 @@
 # Randomware Writeup
+
 **Description:**
 
 One of my friends got targeted by a ransomware attack. He had a really important file called *flag.txt* but the malware removed it and replaced it with a file called *flag.txt.enc*. Once he opened his laptop he got this message:
-    
+
     Victim ID: 1498185700
     File ID: 1268616
     You have been targeted by a ransomware attack! Send bitcoin or you won't get your files back!
 
 The ransomware code and the encrypted file are attached below. Help him recover his file.
 
-**Attachements:** 
+**Attachements:**
 [Randomware.java](Files\Randomware.java) • [flag.txt.enc](Files\flag.txt.enc)
 
 ## Solution
+
 ### Understanding the title and description
+
 The task description says a lot about the solution itself. **Random**ware is hinting at randomness, say seeds prediction and so on. The other part of the story hints at decryption as we're also provided with an encrypted flag file. One more important thing: **The values in the description are the key to solve the challenge!**
 
 ### Reading the "ransomware" code
+
 After having a look at the provided code, we can deduce its functioanlity pretty quickly:
 
  1. It takes a secret key and seeds it to the Random object
@@ -25,6 +29,7 @@ After having a look at the provided code, we can deduce its functioanlity pretty
  4. It encrypts *flag.txt* writes it to *flag.txt.enc* then removes the original *flag.txt* file and prints a message.
 
 ### Learning about randomness in Java
+
 After some googling as usual we stumble upon [this answer](https://crypto.stackexchange.com/questions/51686/how-to-determine-the-next-number-from-javas-random-method) on stack overflow that provides the following code snippet that can predict the third random value based on two random values using some mathematical formula.
 
     import java.util.Random;
@@ -56,6 +61,7 @@ After some googling as usual we stumble upon [this answer](https://crypto.stacke
     }
 
 ### Writing a solver
+
 Now all we need to do is to adapt this snippet to our specific case.
 
  1. We implement the decrypt function. It's a basic decrypt function that you can find here: [Wr4pped Writeup](Wr4pped.md)
@@ -112,7 +118,6 @@ Here is what the final code looks like:
             }
         }
     }
-
 
 We run our solver by typing the next commands in the terminal `javac Solver.java` then `java Solver` and we get our flag!
 
