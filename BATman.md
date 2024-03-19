@@ -5,7 +5,7 @@
 BATman is trying to ask you out. He told me that he **SET** some variables for you. I don't know what that means. Do you?
 
 **Attachement:**
-[batman.bat](Files\batman.bat)
+[batman.bat](Files/batman.bat)
 
 ## Solution
 

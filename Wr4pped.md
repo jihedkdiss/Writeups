@@ -5,7 +5,7 @@
 It's valentine's day so I wrapped a gift for you. Look closely and you'll be able to retrieve it. Happy valentine's!
 
 **Attachement:**
-[Wr4pped.exe](Files\Wr4pped.exe)
+[Wr4pped.exe](Files/Wr4pped.exe)
 
 ## Solution
 
