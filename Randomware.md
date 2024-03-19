@@ -11,7 +11,7 @@ One of my friends got targeted by a ransomware attack. He had a really important
 The ransomware code and the encrypted file are attached below. Help him recover his file.
 
 **Attachements:**
-[Randomware.java](Files\Randomware.java) • [flag.txt.enc](Files\flag.txt.enc)
+[Randomware.java](Files/Randomware.java) • [flag.txt.enc](Files/flag.txt.enc)
 
 ## Solution
 
