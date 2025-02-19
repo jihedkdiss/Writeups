@@ -4,8 +4,8 @@
 
 Start with this easy challenge and good luck!
 
-**Attachement:**
-[welcome](Files/welcome)
+**Attachment:**
+[welcome](../Files/welcome)
 
 ## Solution
 

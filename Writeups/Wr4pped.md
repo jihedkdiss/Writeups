@@ -4,8 +4,8 @@
 
 It's valentine's day so I wrapped a gift for you. Look closely and you'll be able to retrieve it. Happy valentine's!
 
-**Attachement:**
-[Wr4pped.exe](Files/Wr4pped.exe)
+**Attachment:**
+[Wr4pped.exe](../Files/Wr4pped.exe)
 
 ## Solution
 
@@ -40,9 +40,9 @@ After some digging around we couldn't find the password in plaintext but we see 
 
 After googling for some time we stumble upon [this answer](https://reverseengineering.stackexchange.com/questions/3532/get-jar-back-from-wrappedinto-exe-jar) on how to get the .jar file from the .exe file. We follow the steps:
 
- 1. Open .exe file in a hex editor (such as [HxD](https://mh-nexus.de/en/hxd/))
- 2. Remove anything before the string PK
- 3. Save the new file as Wr4pped.jar
+1. Open .exe file in a hex editor (such as [HxD](https://mh-nexus.de/en/hxd/))
+2. Remove anything before the string PK
+3. Save the new file as Wr4pped.jar
 
 ### Decompiling the jar file
 

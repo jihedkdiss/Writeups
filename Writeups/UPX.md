@@ -4,8 +4,8 @@
 
 `strings` is a great linux command. It shows you all the strings in a file. Sometimes the flag is there, sometimes it isn't. But there will be always something useful there!
 
-**Attachement:**
-[upx](Files/upx)
+**Attachment:**
+[upx](../Files/upx)
 
 ## Solution
 

@@ -4,8 +4,8 @@
 
 This binary contains a free flag. Find it!
 
-**Attachement:**
-[welcomeagain](Files/welcomeagain)
+**Attachment:**
+[welcomeagain](../Files/welcomeagain)
 
 ## Solution
 

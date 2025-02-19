@@ -4,8 +4,8 @@
 
 This one is pretty straightforward. Just read the code and figure it out!
 
-**Attachement:**
-[rotation.py](Files/rotation.py)
+**Attachment:**
+[rotation.py](../Files/rotation.py)
 
 ## Solution
 

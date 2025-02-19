@@ -10,8 +10,8 @@ One of my friends got targeted by a ransomware attack. He had a really important
 
 The ransomware code and the encrypted file are attached below. Help him recover his file.
 
-**Attachements:**
-[Randomware.java](Files/Randomware.java) • [flag.txt.enc](Files/flag.txt.enc)
+**Attachments:**
+[Randomware.java](../Files/Randomware.java) • [flag.txt.enc](../Files/flag.txt.enc)
 
 ## Solution
 
@@ -23,10 +23,10 @@ The task description says a lot about the solution itself. **Random**ware is hin
 
 After having a look at the provided code, we can deduce its functioanlity pretty quickly:
 
- 1. It takes a secret key and seeds it to the Random object
- 2. It generates two random values and performs some basic operations on them
- 3. It generates the decryption key, which is the one we're looking for.
- 4. It encrypts *flag.txt* writes it to *flag.txt.enc* then removes the original *flag.txt* file and prints a message.
+1. It takes a secret key and seeds it to the Random object
+2. It generates two random values and performs some basic operations on them
+3. It generates the decryption key, which is the one we're looking for.
+4. It encrypts *flag.txt* writes it to *flag.txt.enc* then removes the original *flag.txt* file and prints a message.
 
 ### Learning about randomness in Java
 
@@ -64,9 +64,9 @@ After some googling as usual we stumble upon [this answer](https://crypto.stacke
 
 Now all we need to do is to adapt this snippet to our specific case.
 
- 1. We implement the decrypt function. It's a basic decrypt function that you can find here: [Wr4pped Writeup](Wr4pped.md)
- 2. We brute force the file ID to get back to the original number since we divided it by 1337.
- 3. We check if we have the correct value, if so we decrypt the file.
+1. We implement the decrypt function. It's a basic decrypt function that you can find here: [Wr4pped Writeup](Wr4pped.md)
+2. We brute force the file ID to get back to the original number since we divided it by 1337.
+3. We check if we have the correct value, if so we decrypt the file.
 
 Here is what the final code looks like:
 
